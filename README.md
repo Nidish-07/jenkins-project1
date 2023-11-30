@@ -22,24 +22,6 @@ Before running the Jenkins pipeline, make sure the following tools are installed
 - [Maven](https://maven.apache.org/install.html)
 - [Docker](https://docs.docker.com/get-docker/)
 
-## Setup Instructions
-
-### 1. Install Jenkins on AWS Ubuntu
-
-Follow the [official Jenkins installation guide for Ubuntu](https://www.jenkins.io/doc/book/installing/#debian-ubuntu).
-
-### 2. Install Git, Maven, and Docker on AWS Ubuntu
-
-Run the following commands on your AWS Ubuntu instance:
-
-```bash
-sudo apt-get update
-sudo apt-get install git
-sudo apt-get install maven
-sudo apt-get install docker.io
-sudo systemctl start docker
-sudo systemctl enable docker
-
 3. Jenkins Configuration
 Add Docker Hub credentials in Jenkins: Go to "Manage Jenkins" -> "Manage Credentials" -> "(global)" and add Docker Hub username and password.
 
@@ -60,3 +42,23 @@ Additional Tips
 Customize the Maven tool version and other configurations in the Jenkinsfile.
 Adjust Docker image names and tags in the Docker build and push steps.
 Feel free to adapt this README based on your project's specific details. Happy coding!
+
+
+## Setup Instructions
+
+### 1. Install Jenkins on AWS Ubuntu
+
+Follow the [official Jenkins installation guide for Ubuntu](https://www.jenkins.io/doc/book/installing/#debian-ubuntu).
+
+### 2. Install Git, Maven, and Docker on AWS Ubuntu
+
+Run the following commands on your AWS Ubuntu instance:
+
+```bash
+sudo apt-get update
+sudo apt-get install git
+sudo apt-get install maven
+sudo apt-get install docker.io
+sudo systemctl start docker
+sudo systemctl enable docker
+
